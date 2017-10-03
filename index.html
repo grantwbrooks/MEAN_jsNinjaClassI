@@ -12,9 +12,9 @@
             var speed = 3;
             var strength = 3;
 
-            this.sayName = function(){
-                console.log("Hola my ninja name is "+this.name);
-            }
+            // this.sayName = function(){
+            //     console.log("Hola my ninja name is "+this.name);
+            // }
             this.showStats = function(){
                 console.log("Health: "+this.health+", Speed: "+speed+", Strength: "+strength);
                 return this;
@@ -23,6 +23,11 @@
                 this.health += 10;
                 return this;
             }
+        }
+        //tried out the proto thang
+        Ninja.prototype.sayName = function(){
+            console.log("Yo I'm",this.name);
+            return this;
         }
 
         var ninja1 = new Ninja("Hyabusa");
